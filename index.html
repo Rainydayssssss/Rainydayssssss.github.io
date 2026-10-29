@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rain 的网页应用与 Windows 程序入口">
+  <title>Rain 的工具箱</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Cpath d='M20 44V20h14a8 8 0 0 1 0 16h-6l10 8' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: light dark; --bg: #f6f7fb; --card: #fff; --text: #1f2430; --muted: #5b6474; --line: #e2e6ef; --accent: #2563eb; --accent-text: #fff; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #11141a; --card: #1a1f28; --text: #e8ebf2; --muted: #9aa3b5; --line: #2a3140; --accent: #4f8cff; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 "Microsoft YaHei UI", "PingFang SC", system-ui, sans-serif; }
+    main { max-width: 960px; margin: 0 auto; padding: 40px 20px 56px; }
+    h1 { font-size: 30px; margin: 0 0 6px; }
+    h2 { font-size: 20px; margin: 40px 0 14px; }
+    h3 { font-size: 18px; margin: 0 0 6px; }
+    p { margin: 0 0 8px; }
+    a { color: var(--accent); }
+    .lead, .small, .hint { color: var(--muted); }
+    .small { font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+    a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card .go { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; }
+    .hint { display: block; font-size: 14px; margin-top: 4px; }
+    .callout { background: var(--card); border: 2px solid var(--accent); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+    .button { display: inline-block; background: var(--accent); color: var(--accent-text); padding: 10px 18px; border-radius: 10px; font-weight: 600; text-decoration: none; margin: 8px 0; }
+    .apps { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .apps th, .apps td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .apps tr:last-child td { border-bottom: 0; }
+    .apps th { font-size: 14px; color: var(--muted); font-weight: 600; }
+    .apps td:last-child { white-space: nowrap; }
+    footer { margin-top: 40px; font-size: 14px; color: var(--muted); }
+    @media (max-width: 640px) { .apps td:nth-child(2), .apps th:nth-child(2) { display: none; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Rain 的工具箱</h1>
+    <p class="lead">任何电脑打开这个页面就能用。代码改动推送到 GitHub 后会自动构建发布，刷新页面或重新打开程序即是最新版。</p>
+  </header>
+
+  <section>
+    <h2>网页应用</h2>
+    <div class="grid">
+      <a class="card" href="audiobook/">
+        <h3>听书</h3>
+        <p>导入 TXT、EPUB、Word、PDF 或直接粘贴文字，用微软神经网络“自然人声”逐句朗读。</p>
+        <span class="hint">自然人声只在 Microsoft Edge 里可用，请用 Edge 打开。</span>
+        <span class="go">打开 →</span>
+      </a>
+      <a class="card" href="mystery/">
+        <h3>诡秘档案</h3>
+        <p>中文单人调查冒险：创建调查员、技能与 SAN 检定、多结局。首次打开后可离线游玩。</p>
+        <span class="hint">存档保存在当前浏览器里，可在应用内导出备份。</span>
+        <span class="go">打开 →</span>
+      </a>
+    </div>
+    <p class="small" style="margin-top:12px">网页应用的书架、存档都只保存在当前浏览器，换电脑或换浏览器不会自动同步。</p>
+  </section>
+
+  <section>
+    <h2>Windows 桌面程序</h2>
+    <div class="callout">
+      <h3>推荐：Rain 工具箱（只需下载一次）</h3>
+      <p>双击运行后会安装到本机并在桌面创建图标。以后点工具箱里的程序或桌面图标，会自动检查并使用最新版，不用再来这里下载。</p>
+      <a class="button" href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/download/toolbox/RainToolbox.exe">下载 Rain 工具箱</a>
+      <p class="small">第一次运行如果出现“Windows 已保护你的电脑”，点“更多信息”→“仍要运行”。需要 Windows 10 或 11。</p>
+    </div>
+    <table class="apps">
+      <thead><tr><th>程序</th><th>说明</th><th>单独下载（最新版）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>股票异动监控</td>
+          <td>输入代码或名称，监控沪深京 A 股的异常波动偏离值，盘中每 8 秒刷新。</td>
+          <td><a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/download/stock-abnormal-monitor/stock-abnormal-monitor.zip">zip</a> · <a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/tag/stock-abnormal-monitor">版本</a></td>
+        </tr>
+        <tr>
+          <td>影音转文字</td>
+          <td>本地视频/音频或 B 站、抖音链接转文字，导出 TXT、SRT、VTT。</td>
+          <td><a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/download/media-transcriber/media-transcriber.zip">zip</a> · <a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/tag/media-transcriber">版本</a></td>
+        </tr>
+        <tr>
+          <td>北京时间定时按键</td>
+          <td>按 NTP 校准的北京时间，在指定时刻向前台窗口发送按键或组合键。</td>
+          <td><a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/download/beijing-time-hotkey/beijing-time-hotkey.zip">zip</a> · <a href="https://github.com/Rainydayssssss/Rainydayssssss.github.io/releases/tag/beijing-time-hotkey">版本</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin-top:12px">单独下载的 zip 需要解压整个文件夹后运行其中的 exe，不会自动更新。</p>
+  </section>
+
+  <footer>源码保存在私有仓库，本页由 GitHub Pages 托管。</footer>
+</main>
+</body>
+</html>
