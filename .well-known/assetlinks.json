@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.rainydayssssss.listenbooks",
+      "sha256_cert_fingerprints": ["07:0D:1A:37:44:48:DC:E0:BB:90:0D:E7:E1:70:42:F5:C5:CE:FE:A6:C7:7A:F7:36:E3:7F:80:51:D3:49:CD:BC"]
+    }
+  }
+]
